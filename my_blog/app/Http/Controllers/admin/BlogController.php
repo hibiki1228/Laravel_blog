@@ -24,7 +24,7 @@ class BlogController extends Controller
     public function index()
     {
         $blog_infos = $this->blogService->getALLBlogs();
-        return view('admin.blogs.index', ['blog_infos' => $blog_infos]);
+        return view('admin.index', ['blog_infos' => $blog_infos]);
     }
 
     /**

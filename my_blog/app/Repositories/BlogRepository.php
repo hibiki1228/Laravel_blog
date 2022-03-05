@@ -7,9 +7,9 @@ use phpDocumentor\Reflection\Types\Null_;
 
 class BlogRepository implements BlogRepositoryInterface
 {
-    public function __construct(Blog $Blogs = NULL)
+    public function __construct(Blog $Blog = NULL)
     {
-        $this->Blog = $Blogs ?? new Blog();
+        $this->Blog = $Blog ?? new Blog();
     }
 
     /**

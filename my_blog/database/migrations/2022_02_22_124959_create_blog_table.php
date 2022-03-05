@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('blog', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->comment(('ユーザーID'));
             $table->text('title')->comment('title');
             $table->text('body')->comment('本文');
             $table->integer('category')->comment('カテゴリ');
             $table->integer('is_ok')->comment('公開');
-            $table->integer('user_id')->comment(('ユーザーID'));
+
             $table->timestamps();
         });
     }
