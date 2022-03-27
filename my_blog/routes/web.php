@@ -22,5 +22,5 @@ Route::prefix("blogs")->group(function () {
     Route::get('/show/{blog_id}', [BlogController::class, 'show'])->name('blogs.show');
     Route::get('/edit/{blog_id}', [BlogController::class, 'edit'])->name('blogs.edit');
     Route::get('/delete/{blog_id}', [BlogController::class, 'deleteBlog'])->name('blogs.delete');
-    Route::get('/store', [BlogController::class, 'store'])->name('blogs.store');
+    Route::get('/create', [BlogController::class, 'create'])->name('blogs.create');
 });

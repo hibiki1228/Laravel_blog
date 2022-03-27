@@ -32,7 +32,7 @@ class BlogController extends Controller
      *
      * @return view
      */
-    public function store()
+    public function create()
     {
         return view('admin.store');
     }
@@ -59,7 +59,7 @@ class BlogController extends Controller
     public function edit(int $blog_id)
     {
         $blog_info = $this->blogService->getBlog($blog_id);
-        return view('admin.blogs.edit', ['blog_info' => $blog_info]);
+        return view('admin.edit', ['blog_info' => $blog_info]);
     }
 
     /**
@@ -71,7 +71,7 @@ class BlogController extends Controller
     public function show(int $blog_id)
     {
         $blog_info = $this->blogService->getBlog($blog_id);
-        return view('admin.blogs.show', ['blog_info' => $blog_info]);
+        return view('admin.show', ['blog_info' => $blog_info]);
     }
 
     /**
