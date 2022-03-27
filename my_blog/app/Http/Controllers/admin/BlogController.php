@@ -34,7 +34,7 @@ class BlogController extends Controller
      */
     public function store()
     {
-        return view('admin.blogs.store');
+        return view('admin.store');
     }
 
     /**
